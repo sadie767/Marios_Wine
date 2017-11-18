@@ -1,0 +1,18 @@
+<%= form_for @product do |f| %>
+  <%= f.label :grape %>
+  <%= f.text_field :grape %>
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :cost %>
+  <%= f.text_field :cost %>
+  <br>
+  <%= f.label :country %>
+  <%= f.text_field :country %>
+  <br>
+
+  <%= f.submit %>
+<% end %>
+
+<%= render "layouts/errors", :object => @product %>
