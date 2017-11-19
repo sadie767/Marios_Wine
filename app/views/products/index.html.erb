@@ -15,7 +15,13 @@
   <% end %>
 </ul>
 <br>
-<h2 class="tab">Wine With The Most Reviews!</h2>
+<h2 class="tab">Here Is Our Wine With The Most Reviews!</h2>
+<% @products.most_reviews.each do |product| %>
+  <li class="tab"><%= product.grape %><br>
+      <%= link_to product.name, product_path(product) %>
+      <br></li>
+      <hr>
+<% end %>
 <br>
 <h2 class="tab">Wines Made In the USA</h2>
 <% @products.usa.each do |product| %>
