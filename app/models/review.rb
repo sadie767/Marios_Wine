@@ -5,4 +5,6 @@ class Review < ActiveRecord::Base
   validates :product_id, :presence => true
 
   belongs_to :product
+
+  # scope :most_reviews { Review}
 end

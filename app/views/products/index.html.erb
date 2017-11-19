@@ -1,11 +1,28 @@
-<h1>Products</h1>
 
+<div class="border_about">
+<h2>About us</h2>
+<h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</h4>
+</div>
+<a id="wine_girl"><%= image_tag "wine_girl.jpg" %></a>
 <ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
+  <br>
+  <h2>Most Recently Added Wines!</h2>
+  <% @products.three_most_recent.each do |product| %>
+    <li class="tab"><%= product.grape %><br>
+        <%= link_to product.name, product_path(product) %>
+        <br></li>
+        <hr>
   <% end %>
 </ul>
-
-<hr>
-
-<%= link_to "New Product", new_product_path %>
+<br>
+<h2 class="tab">Wine With The Most Reviews!</h2>
+<br>
+<h2 class="tab">Wines Made In the USA</h2>
+<% @products.usa.each do |product| %>
+  <li class="tab"><%= product.grape %><br>
+      <%= link_to product.name, product_path(product) %>
+      <br></li>
+      <hr>
+<% end %>
+<br><br><br>
+<p class="tab">Add a <%= link_to  "New", new_product_path %> Product</p>

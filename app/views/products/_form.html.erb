@@ -1,18 +1,20 @@
+<div class="border_form">
 <%= form_for @product do |f| %>
   <%= f.label :grape %>
-  <%= f.text_field :grape %>
-  <br>
+  <a class="tab_right"><%= f.text_field :grape %></a>
+  <br><br>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <br>
+  <br><br>
   <%= f.label :cost %>
   <%= f.text_field :cost %>
-  <br>
+  <br><br>
   <%= f.label :country %>
   <%= f.text_field :country %>
-  <br>
+  <br><br>
 
   <%= f.submit %>
 <% end %>
 
 <%= render "layouts/errors", :object => @product %>
+</div>

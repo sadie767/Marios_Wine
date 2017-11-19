@@ -1,33 +1,33 @@
 <% content_for(:title, "Product | Mario's Wines") %>
 
-<h1><%= @product.name %></h1>
-
-
+<h1 class="tab"><%= @product.name %></h1>
+<br>
 <% if @product.reviews.any? %>
-  <h4>Here are the reviews for this product:</h4>
-
+  <h4 class="tab">Here are the reviews for this product:</h4>
+  <br>
   <ul>
     <% @product.reviews.each do |review| %>
       <li>
-        <%= review.author %><br>
-        <%= review.content_body %><br>
-        <%= review.rating %><br>
+        <h5><%= review.author %></h5>
+        <p class="border_about"><%= review.content_body %></p><br>
+        <p>Rating: <%= review.rating %></p>
         |
         <%= link_to "Edit review", edit_product_review_path(@product, review) %> |
-        <%= link_to "Delete", product_review_path(@product, review),
+        <%= link_to "Delete |", product_review_path(@product, review),
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
       </li>
+      <br>
     <% end %>
   </ul>
 <% else %>
   <p>There are no reviews yet!</p>
 <% end %>
 
-<p><%= link_to "Add a review", new_product_review_path(@product) %></p>
-<p><%= link_to "Edit Wines", edit_product_path(@product) %></p>
-<p><%= link_to "Delete Wine", product_path(@product),
+<p class="tab"><%= link_to "Add a review", new_product_review_path(@product) %></p>
+<p class="tab"><%= link_to "Edit Wines", edit_product_path(@product) %></p>
+<p class="tab"><%= link_to "Delete Wine", product_path(@product),
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %></p>
-
-<p><%= link_to "Return to List of Wines", products_path %></p>
+<hr>
+<p class="tab"><%= link_to "List", products_path %> of Wines</p>

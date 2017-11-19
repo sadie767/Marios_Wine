@@ -6,6 +6,7 @@ Review.destroy_all
     name: Faker::Witcher.character,
     cost: Faker::Number.between(10, 500),
     country: Faker::Witcher.location)
+  p "Created #{Product.count} products"
     5.times do |index|
    Review.create!(author: Faker::TwinPeaks.character,
      content_body: Faker::Lorem.sentence(20, false, 0).chop,

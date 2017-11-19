@@ -9,9 +9,22 @@
   </head>
 
   <body>
+    <br>
+    <nav id="nav_color" class="navbar navbar-default">
+  <div class="container-fluid">
+    <div id="nav1" class="navbar-header">
+      <br>
+      <h1 class="nav navbar-nav navbar-right">Mario's Wines</h1>
+  </div>
+  <br>
+
+  <div class="nav navbar-nav navbar-right"><a><%= link_to "| Home |", products_path %></a>
+  <a><%= link_to "Search |" %></a>
+</div>
+</nav>
     <%= flash[:alert] %>
     <%= flash[:notice] %>
-    
+
     <%= yield %>
   </body>
 </html>
