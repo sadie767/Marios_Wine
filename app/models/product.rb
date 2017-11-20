@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
   validates :grape, :presence => true
   validates :name, :presence => true
-  validates :cost, :presence => true
+  validates :cost, :presence => true,  numericality: true
   validates :country, :presence => true
 
   has_many :reviews

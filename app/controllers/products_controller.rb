@@ -1,6 +1,14 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    if params[:sort] == "three_most_recent"
+      @products = Product.three_most_recent
+    elsif params[:sort] == "most_reviews"
+      @products = Product.most_reviews
+    elsif params[:sort] == "usa"
+      @products = Product.usa
+    else
+      @products = Product.all
+    end
   end
 
   def show

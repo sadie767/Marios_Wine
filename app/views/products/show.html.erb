@@ -1,6 +1,10 @@
 <% content_for(:title, "Product | Mario's Wines") %>
-
-<h1 class="tab"><%= @product.name %></h1>
+<a class="wine_girl"><%= image_tag "red_wine.jpg" %></a>
+<h1 class="tab">Name: <%= @product.name %></h1>
+<h2 class="tab">Type: <%= @product.grape %></h2>
+<h2 class="tab">Cost: $<%= @product.cost %></h2>
+<h2 class="tab">Origin: <%= @product.country %></h2>
+<hr>
 <br>
 <% if @product.reviews.any? %>
   <h4 class="tab">Here are the reviews for this product:</h4>
@@ -12,10 +16,10 @@
         <p class="border_about"><%= review.content_body %></p><br>
         <p>Rating: <%= review.rating %></p>
         |
-        <%= link_to "Edit review", edit_product_review_path(@product, review) %> |
-        <%= link_to "Delete |", product_review_path(@product, review),
+        <%= link_to "Edit review", edit_product_review_path(@product, review), class: 'red' %> |
+        <%= link_to "Delete ", product_review_path(@product, review), class: 'red',
                                  :data => {:confirm => "Are you sure?",
-                                                :method => "delete"} %>
+                                                :method => "delete"} %> |
       </li>
       <br>
     <% end %>
@@ -24,10 +28,10 @@
   <p>There are no reviews yet!</p>
 <% end %>
 
-<p class="tab"><%= link_to "Add a review", new_product_review_path(@product) %></p>
-<p class="tab"><%= link_to "Edit Wines", edit_product_path(@product) %></p>
-<p class="tab"><%= link_to "Delete Wine", product_path(@product),
+<p class="tab"><%= link_to "Add a review", new_product_review_path(@product), class: 'red' %></p>
+<p class="tab"><%= link_to "Edit Wines", edit_product_path(@product), class: 'red' %></p>
+<p class="tab"><%= link_to "Delete Wine", product_path(@product), class: 'red',
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %></p>
 <hr>
-<p class="tab"><%= link_to "List", products_path %> of Wines</p>
+<p class="tab"><%= link_to "List", products_path, class: 'red' %> of Wines</p>

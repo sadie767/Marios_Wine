@@ -6,13 +6,12 @@
 
 ### Description
 
-_Mario, the owener of Mario's Wine, is concerned about the information in his database being correct._
+_Mario, the owenr of Mario's Wine, is concerned about the information in his database being correct._
 
 _The site should have functionality to review products so your database should include a Products and Reviews. All products must have a name, cost and country. All reviews should have author, content_body and rating. (A rating can be a number between 1 and 5.) You can include other fields of your choosing as well._
 
 _The landing page should include basic information about the company and should allow users to easily navigate to other areas of the site. This page should also include the three most recently added products and the product with the most reviews._
 
-![description](image.file)
 
 ### User Stories
 

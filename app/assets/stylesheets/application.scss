@@ -5,14 +5,20 @@
 body {
   background-color: black;
   color: #8b0000;
+  a:link {
+    color: #cdb7b5;
+  }
+  .red {
+    color: #cdb7b5;
+  }
 }
-
-#wine_girl {
-  height: 30px;
-  width: auto;
+img {
+  height: 575px;
+}
+.wine_girl {
   position: fixed;
   right: 20px;
-  top: 160px;
+  top: 150px;
 }
 
 #nav_color {
@@ -31,12 +37,6 @@ body {
 
 .center {
 text-align: center;
-}
-
-li {
-  a:link {
-  color: red;
-  }
 }
 
  hr {
@@ -59,7 +59,7 @@ li {
   border-right-color: white;
   border-top-color: white;
   border-bottom-color: white;
-  border-style: solid;
+  border-style: double;
   width: 25%;
   margin-left: 25px;
   padding: 2px;

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "the add a review process" do
   it "adds a new review" do
     visit products_path
-    click_link 'New Product'
+    click_link 'New'
     fill_in 'Grape', :with => 'Pinot Noir'
     fill_in 'Name', :with => 'Willow'
     fill_in 'Cost', :with => 25

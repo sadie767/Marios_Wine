@@ -1,14 +1,16 @@
+<div class="border_form">
 <%= form_for [@product, @review] do |f| %>
   <%= f.label :author %>
   <%= f.text_field :author %>
-  <br>
+  <br><br>
   <%= f.label :content_body %>
   <%= f.text_field :content_body %>
-  <br>
+  <br><br>
   <%= f.label :rating %>
   <%= f.text_field :rating %>
-  <br>
+  <br><br>
   <p><%= f.submit %></p>
 <% end %>
+</div>
 
 <%= render('layouts/errors', :object => @review) %>
