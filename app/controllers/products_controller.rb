@@ -1,9 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :authorize, only: [:new]
-  before_action :authorize, only: [:create]
-  before_action :authorize, only: [:edit]
-  before_action :authorize, only: [:update]
-  before_action :authorize, only: [:destroy]
+  before_action :authorize, only: [:index]
+
 
   def index
     if params[:sort] == "three_most_recent"
