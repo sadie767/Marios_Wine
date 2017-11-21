@@ -1,11 +1,9 @@
-<h1 class="tab">Sign up</h1>
+<h1 class="tab"> Sign up</h1>
+<br>
 <div class="tab">
 <%= form_for @user do |f| %>
   <%= f.label "Email" %>
   <%= f.text_field :email %>
-  <br>
-  <%= f.label "User Name" %>
-  <%= f.text_field :user_name %>
   <br>
   <%= f.label "Password" %>
   <%= f.password_field :password %>
